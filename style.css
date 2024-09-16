@@ -1,0 +1,42 @@
+val{
+  text-align: center;
+  font-size: 40px;
+}
+h3{
+ font-size: 27px;
+ text-align: center;
+}
+
+.scroll-animation {
+    position: relative;
+    animation: scroll-up 2s ease-in-out infinite; /* durasi dan efek */
+}
+
+@keyframes scroll-up {
+    0% {
+        transform: translateY(100%); /* Mulai dari bawah */
+        opacity: 0; /* Transparan */
+    }
+    50% {
+        opacity: 1; /* Menjadi terlihat */
+    }
+    100% {
+        transform: translateY(0); /* Berhenti di posisi normal */
+        opacity: 1; /* Tetap terlihat */
+    }
+}
+```
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #4caf50;
+    opacity: 0; /* Awalnya tidak terlihat */
+    transform: translateY(100px); /* Mulai dari bawah */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Animasi */
+}
+
+.box.visible {
+    opacity: 1; /* Jadi terlihat */
+    transform: translateY(0); /* Pindah ke posisi normal */
+}
